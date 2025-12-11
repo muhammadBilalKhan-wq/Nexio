@@ -1,0 +1,388 @@
+📌 APP NAME
+
+KnowledgeHub – Share Pure Knowledge
+
+📌 OBJECTIVE (VERY IMPORTANT)
+
+Create a complete, production-ready Flutter + Firebase social networking application where users only share knowledge-based posts (no memes, no random videos, no spam).
+
+The AI must generate:
+
+✔ Full Flutter app code (production-ready)
+✔ Complete Firebase backend setup
+✔ Authentication (Email, Google, OTP)
+✔ Firestore database schema
+✔ Cloud Storage logic
+✔ App routing, themes, UI, components
+✔ Apple-style clean UI design
+✔ State management
+✔ Recommended improvements
+
+Use best Flutter practices, modern architecture, and clean code.
+
+📌 TECH STACK REQUIREMENTS
+
+Flutter 3.x
+
+Dart
+
+Firebase:
+
+Authentication
+
+Firestore
+
+Cloud Storage
+
+Cloud Functions
+
+Firebase Messaging (push notifications)
+
+Firebase Analytics
+
+State Management: Riverpod or Provider
+
+Theme: Apple-style, minimal, rounded, soft shadows
+
+Animations: Smooth transitions with implicit animations or Lottie
+
+🚀 CORE FEATURES TO BUILD
+1. Authentication System
+
+Must include:
+
+Email & Password Login
+
+Google Sign-in
+
+OTP Login (Phone Auth)
+
+Forgot Password
+
+Complete auth state handling
+
+User onboarding screen
+
+2. User Profile System
+
+Each user should have:
+
+Profile photo
+
+Name
+
+Bio
+
+Area of expertise (category)
+
+Followers / Following
+
+Reputation score
+
+Total knowledge posts
+
+Backend structure for users collection:
+
+users -> userId -> {
+  name,
+  email,
+  bio,
+  profilePicUrl,
+  expertise,
+  followers,
+  following,
+  reputationScore,
+  createdAt
+}
+
+3. Knowledge Posting System
+
+Users can post only knowledge, such as:
+
+Short articles
+
+Facts
+
+Mini-guides
+
+Educational notes
+
+Each post contains:
+
+Title
+
+Content
+
+Category
+
+Tags
+
+Timestamp
+
+Author details
+
+Upvotes count
+
+Saves count
+
+Firestore structure:
+
+posts -> postId -> {
+  title,
+  content,
+  category,
+  tags,
+  coverImageUrl,
+  authorId,
+  upvotes,
+  saves,
+  createdAt
+}
+
+4. Feed & Explore Page
+
+Implement:
+
+Smart recommendation algorithm
+
+Trending posts
+
+Category-based filtering
+
+Latest posts section
+
+“For You” feed
+
+5. Interaction System
+
+Users can:
+
+Upvote
+
+Comment
+
+Save post
+
+Share post
+
+Report a post
+
+Follow users
+
+Firestore collections:
+
+comments
+
+notifications
+
+reports
+
+followers
+
+6. Reputation System
+
+Score increases with:
+
+Upvotes
+
+Saves
+
+Quality of posts
+
+Account age
+
+Levels:
+
+Beginner
+
+Rising
+
+Skilled
+
+Expert
+
+Master
+
+Add badge icons.
+
+7. Search System
+
+Search across:
+
+Posts
+
+Categories
+
+Tags
+
+Users
+
+Implement index-based quick search in Firestore.
+
+8. Notification System (Push + In-app)
+
+Types:
+
+New follower
+
+Post upvoted
+
+Comment added
+
+Mention in comment
+
+Profile level-up
+
+Use:
+
+Firebase Messaging for push
+
+Firestore streams for in-app
+
+9. Settings Page
+
+Edit Profile
+
+Change Password
+
+Dark/Light Mode
+
+Delete Account
+
+App language: English + Urdu
+
+Privacy settings
+
+10. Admin Panel (Inside the App)
+
+Remove inappropriate content
+
+Manage reports
+
+View banned users
+
+🧠 FIREBASE BACKEND REQUIREMENTS
+Firestore Collections Required
+
+users
+
+posts
+
+comments
+
+notifications
+
+reports
+
+followers
+
+analytics (optional)
+
+Rules (Security Rules Required)
+
+AI should generate strong Firebase rules for:
+
+Allowed read/write
+
+User-only updates
+
+Preventing spam
+
+Protecting reputation system
+
+Cloud Functions Needed
+
+On post upvote → update reputation
+
+On comment → notify author
+
+On follow → send push notification
+
+On account creation → set default data
+
+🧩 FRONTEND STRUCTURE REQUIRED
+
+Use professional architecture:
+
+/lib
+  /screens
+  /components
+  /controllers
+  /services
+  /widgets
+  /models
+  /providers
+  /utils
+  /themes
+  /routes
+
+🎨 UI REQUIREMENTS (APPLE STYLE)
+
+Clean white background
+
+Soft shadows
+
+Rounded cards
+
+Smooth page transitions
+
+Beautiful typography
+
+Large, spaced headings
+
+iOS-style bottom navigation
+
+Screens to design:
+
+Splash
+
+Onboarding
+
+Login/Signup
+
+Home Feed
+
+Explore
+
+Post Create
+
+Post Detail
+
+Profile
+
+Settings
+
+Notifications
+
+Search
+
+📄 OUTPUT REQUIREMENTS
+
+The AI must provide:
+
+✔ Full Flutter code
+
+Completely runnable, no missing files.
+
+✔ Firestore structure
+
+Every collection + document fields.
+
+✔ Cloud Functions code
+✔ Firebase rules
+✔ UI design with components
+✔ Installation guide
+
+Step-by-step:
+
+Clone
+
+Flutter pub get
+
+Firebase CLI init
+
+Add GoogleServices.json & plist
+
+Run
+
+✔ Suggested extra features
